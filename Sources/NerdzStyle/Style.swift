@@ -7,12 +7,12 @@
 
 import UIKit
 
-public class Style<T: UIView> {
-    private let configuration: (T) -> Void
+public class Style<View: UIView> {
+    private let configuration: (View) -> Void
 
-    public init<V: UIView>(parent: Style<V>? = nil, _ configuration: @escaping (T) -> Void) {
+    public init<ParentView: UIView>(parent: Style<ParentView>? = nil, _ configuration: @escaping (View) -> Void) {
         self.configuration = {
-            if let parentView = $0 as? V {
+            if let parentView = $0 as? ParentView {
                 parent?.apply(to: parentView)
             }
 
@@ -20,7 +20,13 @@ public class Style<T: UIView> {
         }
     }
 
-    public func apply(to view: T) {
-        configuration(view)
+    public func apply(to views: View...) {
+        for view in views {
+            configuration(view)
+        }
+    }
+    
+    public func wrapped<WrapperView: UIView>() -> Style<WrapperView> {
+        return Style<WrapperView>(parent: self) { _ in }
     }
 }
