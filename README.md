@@ -82,7 +82,7 @@ Because of a generics you will be forced to use the same generic parameters as v
 ### Using wrap function
 
 ```swift
-myButton.apply(borderedViewStyle.wrap())
+myButton.apply(borderedViewStyle.wrapped())
 ```
 
 ## Installation
