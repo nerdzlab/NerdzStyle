@@ -66,7 +66,7 @@ Also you can apply more than one style at once. The style priority will be incre
 ### Applying several styles to view
 
 ```swift
-myButton.apply(buttonStyle1, buttonStyle2, buttonStyle 3)
+myButton.apply(buttonStyle1, buttonStyle2, buttonStyle3)
 ```
 
 You can also apply same style to several views
