@@ -87,7 +87,17 @@ myButton.apply(borderedViewStyle.wrapped())
 
 ## Installation
 
+### CocoaPods
+
+You can use [CocoaPods](https://cocoapods.org) dependency manager to install `NerdzStyle`.
+In your `Podfile` spicify:
+
+```ruby
+pod 'NerdzStyle', '~> 1.0'
+```
+
 ### Swift Package Manager
+
 To add NerdzStyle to a [Swift Package Manager](https://swift.org/package-manager/) based project, add:
 
 ```swift

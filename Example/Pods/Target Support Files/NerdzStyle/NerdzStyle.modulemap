@@ -1,0 +1,6 @@
+framework module NerdzStyle {
+  umbrella header "NerdzStyle-umbrella.h"
+
+  export *
+  module * { export * }
+}

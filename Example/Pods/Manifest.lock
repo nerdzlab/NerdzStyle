@@ -1,0 +1,16 @@
+PODS:
+  - NerdzStyle (0.1.0)
+
+DEPENDENCIES:
+  - NerdzStyle (from `../`)
+
+EXTERNAL SOURCES:
+  NerdzStyle:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NerdzStyle: 5e875c9098b763d23f0cf76ea86557bd215a5adc
+
+PODFILE CHECKSUM: addf421d1790d1da7addd76e2f1e20b40bec5b19
+
+COCOAPODS: 1.9.2
