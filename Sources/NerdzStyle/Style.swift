@@ -7,6 +7,8 @@
 
 import UIKit
 
+var registeredStyles: [String: Any] = [:]
+
 public class Style<View: UIView> {
     private let configuration: (View) -> Void
 
@@ -28,5 +30,9 @@ public class Style<View: UIView> {
     
     public func wrapped<WrapperView: UIView>() -> Style<WrapperView> {
         return Style<WrapperView>(parent: self) { _ in }
+    }
+    
+    func register(with identifier: String) {
+        registeredStyles[identifier] = self
     }
 }

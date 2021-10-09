@@ -20,3 +20,25 @@ public extension Stylable where Self: UIView {
         styles.forEach({ $0.apply(to: self) })
     }
 }
+
+
+public extension UIView {
+    
+    @IBInspectable var styleIdentifier: String {
+        get {
+            return ""
+        }
+        
+        set {
+            if let casted = self as? Self {
+                UIView.apptyStyle(with: newValue, on: casted)
+            }
+        }
+    }
+    
+    static func apptyStyle<T: UIView>(with identifier: String, on element: T) {
+        if let style = registeredStyles[identifier] as? Style<T> {
+            element.apply(style)
+        }
+    }
+}
